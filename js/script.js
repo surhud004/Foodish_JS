@@ -40,12 +40,11 @@ const getFoodish = (pageName) => {
 
 const imageCount = () => {
   let totalCount = 0;
-  const menuDB = Object.keys(images);
+  const menuDB = Object.keys(imageMetaData);
   menuDB.forEach((eachFoodDB) => {
-    let foodDB = images[eachFoodDB];
-    let foodDBCount = Object.keys(foodDB).length;
-    totalCount += foodDBCount;
-    document.getElementById(`${eachFoodDB}Count`).textContent = foodDBCount;
+    document.getElementById(`${eachFoodDB}Count`).textContent =
+      imageMetaData[eachFoodDB];
+    totalCount += imageMetaData[eachFoodDB];
   });
   document.getElementById("totalFoodishCount").textContent = totalCount;
 };
