@@ -15,7 +15,7 @@
   <script src="js/imageMetaData.js"></script>
   <script src="js/script.js"></script>
 </head>
-<body>
+<body onload="checkURLParams();">
 	<div class="container">
     <h1><img src="assets/logo.png" alt="logo" title="Samosa" height="60"/> Foodish.js</h1>
     <p class="lead">&#x1F372; Random pictures of food dishes. &#x1F35B;</p>
@@ -25,22 +25,22 @@
       </div>
       <div class="col">
         <ul>
-          <li><a href="https://foodish-api.netlify.app/biryani.html">biryani</a> : <span id="biryaniCount"></span></li>
-          <li><a href="https://foodish-api.netlify.app/burger.html">burger</a> : <span id="burgerCount"></span></li>
-          <li><a href="https://foodish-api.netlify.app/butter-chicken.html">butter-chicken</a> : <span id="butterChickenCount"></span></li>
-          <li><a href="https://foodish-api.netlify.app/dessert.html">dessert</a> : <span id="dessertCount"></span></li>
-          <li><a href="https://foodish-api.netlify.app/dosa.html">dosa</a> : <span id="dosaCount"></span></li>
-          <li><a href="https://foodish-api.netlify.app/idly.html">idly</a> : <span id="idlyCount"></span></li>
-          <li><a href="https://foodish-api.netlify.app/pasta.html">pasta</a> : <span id="pastaCount"></span></li>
-          <li><a href="https://foodish-api.netlify.app/pizza.html">pizza</a> : <span id="pizzaCount"></span></li>
-          <li><a href="https://foodish-api.netlify.app/rice.html">rice</a> : <span id="riceCount"></span></li>
-          <li><a href="https://foodish-api.netlify.app/samosa.html">samosa</a> : <span id="samosaCount"></span></li>
+          <li><a href="javascript:navigateFoodish('biryani')">biryani</a> : <span id="biryaniCount"></span></li>
+          <li><a href="javascript:navigateFoodish('burger')">burger</a> : <span id="burgerCount"></span></li>
+          <li><a href="javascript:navigateFoodish('butter-chicken')">butter-chicken</a> : <span id="butterChickenCount"></span></li>
+          <li><a href="javascript:navigateFoodish('dessert')">dessert</a> : <span id="dessertCount"></span></li>
+          <li><a href="javascript:navigateFoodish('dosa')">dosa</a> : <span id="dosaCount"></span></li>
+          <li><a href="javascript:navigateFoodish('idly')">idly</a> : <span id="idlyCount"></span></li>
+          <li><a href="javascript:navigateFoodish('pasta')">pasta</a> : <span id="pastaCount"></span></li>
+          <li><a href="javascript:navigateFoodish('pizza')">pizza</a> : <span id="pizzaCount"></span></li>
+          <li><a href="javascript:navigateFoodish('rice')">rice</a> : <span id="riceCount"></span></li>
+          <li><a href="javascript:navigateFoodish('samosa')">samosa</a> : <span id="samosaCount"></span></li>
           <li>Total Foodish</a> : <span id="totalFoodishCount"></span></li>
         </ul>
         <span>Share this foodish : </span>
           <input id="shareLink" type="text" class="form-control" value=""/>
           <br>
-          <span>API available at : <a href="https://foodish-api.netlify.app/api/">https://foodish-api.netlify.app/api/</a></span>
+          <span>API example available at : <a href="https://foodish-js.netlify.app/api/">https://foodish-js.netlify.app/api/</a></span>
           <br>
           <span>Read the Documentation at : <a href="https://github.com/surhud004/Foodish_JS#readme">Foodish_JS</a></span>
           <br>
@@ -53,7 +53,20 @@
     </div>
   </div>
   <script type="text/javascript">
-    getFoodish('index');
+    function checkURLParams() {
+      let url = new URL(window.location.href);
+      let foodCategory = url.searchParams.get("foodish");
+      if (foodCategory) {
+        getFoodish(foodCategory);
+      } else {
+        getFoodish('index');
+      }
+    }
+
+    function navigateFoodish(foodCategory) {
+      window.location.href = `/?foodish=${foodCategory}`;
+    }
+
     imageCount();
     document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
