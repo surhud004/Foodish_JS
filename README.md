@@ -1,8 +1,8 @@
-# 🍲 Foodish.js 🍛 ![Website](https://img.shields.io/website?down_color=critical&down_message=down&up_color=success&up_message=up&url=https%3A%2F%2Ffoodish-js.netlify.app%2F) [![Netlify Status](https://api.netlify.com/api/v1/badges/e0bc1b66-eafc-42c9-b871-75c23971e015/deploy-status)](https://app.netlify.com/sites/foodish-js/deploys) [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-green.svg?logo=github)](https://github.com/surhud004/Foodish/blob/main/CONTRIBUTING.md)
+# 🍲 Foodish.js 🍛 [![Website](https://img.shields.io/website?down_color=critical&down_message=down&up_color=success&up_message=up&url=https%3A%2F%2Ffoodish-js.netlify.app%2F)](https://foodish-js.netlify.app/) [![Netlify Status](https://api.netlify.com/api/v1/badges/e0bc1b66-eafc-42c9-b871-75c23971e015/deploy-status)](https://app.netlify.com/sites/foodish-js/deploys) [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-green.svg?logo=github)](https://github.com/surhud004/Foodish/blob/main/CONTRIBUTING.md)
 
 ![Logo](https://github.com/surhud004/Foodish_JS/blob/main/assets/logo.ico "Samosa")
 
-A JavaScript version of the [Foodish](https://github.com/surhud004/Foodish#readme) API to GET a random picture of food dishes.
+A JavaScript version of the [Foodish](https://github.com/surhud004/Foodish) API to GET a random picture of food dishes.
 
 ## Demo
 
@@ -85,7 +85,7 @@ Please read the [CONTRIBUTING](https://github.com/surhud004/Foodish/blob/main/CO
 
 ## License
 
-The project is licensed under [MIT](https://opensource.org/licenses/MIT). Please read the [LICENSE](https://github.com/surhud004/Foodish_JS/blob/main/LICENSE.md) for details.
+The project is licensed under [MIT](https://opensource.org/licenses/MIT). Please read the [LICENSE](https://github.com/surhud004/Foodish_JS/blob/main/LICENSE) for details.
 
 ---
 
