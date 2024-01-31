@@ -36,7 +36,7 @@ const getFoodish = (pageName) => {
   document.getElementById("foodish").src = catchOfTheDay;
   document.getElementById(
     "shareLink"
-  ).value = `https://foodish-js.netlify.app/${catchOfTheDay}`;
+  ).value = `https://foodishjs.netlify.app/${catchOfTheDay}`;
 };
 
 const imageCount = () => {
