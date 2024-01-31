@@ -2,6 +2,7 @@ const getFoodish = (pageName) => {
   let catchOfTheDay;
   // menuDB is [biryani, burger, pizza]
   const menuDB = Object.keys(images);
+  console.log(`menu DB`, images)
 
   if (pageName === "index") {
     // random number generator within menuDB array range
