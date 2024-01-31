@@ -6,7 +6,7 @@ function insertToImages(){
   const data = generateMainObject(imagePath)
   // return data;
 
-  fs.writeFileSync(fileToWrite, JSON.stringify(data, null, 2), 'utf-8');
+  fs.writeFileSync(fileToWrite, JSON.stringify(data, null, 2));
 }
 
 
