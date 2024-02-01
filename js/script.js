@@ -2,6 +2,7 @@ const getFoodish = (pageName) => {
   let catchOfTheDay;
   // menuDB is [biryani, burger, pizza]
   const menuDB = Object.keys(images);
+  console.log(`menu DB`, images)
 
   if (pageName === "index") {
     // random number generator within menuDB array range
@@ -35,7 +36,7 @@ const getFoodish = (pageName) => {
   document.getElementById("foodish").src = catchOfTheDay;
   document.getElementById(
     "shareLink"
-  ).value = `https://foodish-js.netlify.app/${catchOfTheDay}`;
+  ).value = `https://foodishjs.netlify.app/${catchOfTheDay}`;
 };
 
 const imageCount = () => {
